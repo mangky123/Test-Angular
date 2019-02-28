@@ -1,0 +1,28 @@
+<p>Angular</p>
+<div class="form-group">
+  presname : <input type="text" class="form-control" [(ngModel)]="presname">
+  spouse_name : <input type="text" class="form-control" [(ngModel)]="spousename">
+  pr_age : <input type="text" class="form-control" [(ngModel)]="prage">
+  sp_age : <input type="text" class="form-control" [(ngModel)]="spage">
+  nr_children : <input type="text" class="form-control" [(ngModel)]="nrchildren">
+  mar_year : <input type="text" class="form-control" [(ngModel)]="maryear">
+  <button (click)="add()">Add</button>
+</div>
+<table class="table">
+  <tr>
+    <td>pres_name</td>
+    <td>spouse_name</td>
+    <td>pr_age</td>
+    <td>sp_age</td>
+    <td>nr_children</td>
+    <td>mar_year</td>
+  </tr>
+  <tr *ngFor="let marriage of marriages; let i = index">
+    <td>{{ marriage.PRES_NAME }}</td>
+    <td>{{ marriage.SPOUSE_NAME }}</td>
+    <td>{{ marriage.PR_AGE }}</td>
+    <td>{{ marriage.SP_AGE }}</td>
+    <td>{{ marriage.NR_CHILDREN }}</td>
+    <td>{{ marriage.MAR_YEAR }}</td>
+  </tr>
+</table>

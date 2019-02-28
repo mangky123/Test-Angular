@@ -1,0 +1,19 @@
+<p>{{ angular_Name }}</p>
+<ul>
+  <li *ngFor="let item of cartArray; let i = index">
+    {{ item }} <button (click)="del(index)">X</button>
+  </li>
+</ul>
+<div>
+  <form [formGroup]="SumForm" (submit)="Sum()">
+    <input type="number" formControlName="firstnumber" />
+    <input type="number" formControlName="secondnumber" />
+    <button type="submit">+</button>
+    <span>{{result}}</span>
+  </form>
+</div>
+
+<div>
+  <input type="number" #Aof>
+  <button (click)="editAof(Aof.value)">editAof</button>
+</div>

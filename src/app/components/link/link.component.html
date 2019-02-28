@@ -1,0 +1,19 @@
+<p>Angular</p>
+<table class="table">
+  <tr>
+    <td>pres_name</td>
+    <td>birth_yr</td>
+    <td>yrs_serv</td>
+    <td>death_age</td>
+    <td>party</td>
+    <td>state_born</td>
+  </tr>
+  <tr *ngFor="let president of presidents; let i = index">
+    <td>{{ president.PRES_NAME }}</td>
+    <td>{{ president.BIRTH_YR }}</td>
+    <td>{{ president.YRS_SERV }}</td>
+    <td>{{ president.DEATH_AGE }}</td>
+    <td>{{ president.PARTY }}</td>
+    <td>{{ president.STATE_BORN }}</td>
+  </tr>
+</table>
